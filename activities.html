@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>:)</title>
+    <link rel="stylesheet" href="css/activities.css" />
+  </head>
+  <body>
+    <div id="activityquestion"><b>Wat gaan we samen doen?</b></div>
+    <div class="activities-selection">
+      <div class="activity-item">
+        <img src="activities/wandelen.jpg" alt="arcade" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="arcade"
+          />wandelen</label
+        >
+      </div>
+      <div class="activity-item">
+        <img src="activities/uit-eten.jpg" alt="cinema" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="cinema"
+          />uit eten</label>
+      </div>
+      <div class="activity-item">
+        <img src="activities/cinema.jpeg" alt="ceramics" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="ceramics"
+          />bioscoop</label
+        >
+      </div>
+      <div class="activity-item">
+        <img src="activities/stadbezoek.jpg" alt="kunsthalle" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="kunsthalle"
+          />stadsbezoek</label
+        >
+      </div>
+        <div class="activity-item">
+            <img src="activities/anders.webp" alt="aquarium" />
+            <label
+            ><input
+                    type="checkbox"
+                    name="activities"
+                    value="aquarium"
+                    onclick="toggleTextbox(this)"
+            />anders</label
+            >
+            <div class="textbox" style="display: none">
+                <textarea placeholder="Specificeer..."></textarea>
+            </div>
+        </div>
+    </div>
+    <button class="button" onclick="location.href='lastpage.html'">
+      Laatste pagina
+    </button>
+    <script>
+        function toggleTextbox(checkbox) {
+            var textbox = checkbox.parentElement.nextElementSibling;
+            textbox.style.display = checkbox.checked ? 'block' : 'none';
+        }
+    </script>
+  </body>
+</html>
